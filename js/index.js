@@ -1,11 +1,10 @@
 //Game constants and variables
-
 let inputDir = {x:0,y:0};
 const foodSound= new Audio("asset/audios/food.mp3");
 const gameOverSound= new Audio("asset/audios/gameover.mp3");
 const moveSound= new Audio("asset/audios/move.mp3");
 const musicSound= new Audio("asset/audios/music.mp3");
-let speed= 2;
+let speed= 9;
 let lastPaintTime=0;
 let score= 0;
 let snakeArr = [
@@ -18,7 +17,6 @@ let food= {x:15,y:15}
 //Game Function
 function main(ctime){
     window.requestAnimationFrame(main)
-    // console.log(ctime)
     if((ctime-lastPaintTime)/1000 < 1/speed){
         return; 
     }
@@ -112,7 +110,7 @@ else{
 }
 window.requestAnimationFrame(main);
 window.addEventListener("keydown",e=>{
-    inputDir = {x:0,y:1} //start the game
+    inputDir = {x:0,y:1}
     moveSound.play();
 
     switch (e.key) {

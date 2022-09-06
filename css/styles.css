@@ -1,0 +1,122 @@
+
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+   background: url(../asset/img/game-background.jpg);
+   background-size:100vw 100vh;
+   background-repeat:no-repeat;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+#scoreBox {
+    position:absolute;
+    top: 9px;
+    /* right: 185px; */
+    font-size:39px;
+    font-weight:bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:aquamarine
+}
+
+#highscoreBox {
+    position:absolute;
+    top: 60px;
+    /* right: 82px; */
+    font-size:39px;
+    font-weight:bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:aquamarine
+}
+.scoreBody {
+    position: absolute;
+    width:250px;
+    height:100px;
+    right:100px;
+}
+
+#board {
+    background: linear-gradient(rgb(131, 150, 233),rgb(240, 88, 176));
+    width:90vmin;
+    height:92vmin;
+    border:2px solid blue;
+    display:grid;
+    grid-template-columns: repeat(18,0.5fr);
+    grid-template-rows: repeat(18,1fr);
+}
+.head {
+    background:linear-gradient(red,yellow);
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+.snake {
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+.food {
+    background:linear-gradient(green,yellow);
+    border: .25vmin solid grey;
+    border-radius:50%;
+}
+
+@media screen and (max-width:1200px){
+    #board{
+         margin-top:20%;
+         margin-bottom: 20%;
+         width:76vmin;
+         height:78vmin;
+    }
+    /* #scoreBox {
+        position:absolute;
+        top: 9px;
+        right: auto;
+        font-size:25px;
+        font-weight:bold;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:aquamarine
+    }
+    
+    #highscoreBox {
+        position:absolute;
+        top: 45px;
+        right:auto;
+        font-size:25px;
+        font-weight:bold;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color:aquamarine
+    } */
+    .scoreBody {
+        position: absolute;
+        width:250px;
+        height:100px;
+        right:auto;
+    }
+    .scoreBody>#highscoreBox,#scoreBox {
+        font-size:25px;
+    }
+    #scoreBox {
+        top: 3px;
+       }
+       #highscoreBox {
+        top:32px;
+       }
+    body{
+        background-size: cover;
+    }
+    @media screen and (max-width:650px){
+       #board {
+        margin-bottom:32%;
+       }
+       #scoreBox {
+        top: 3px;
+       }
+       #highscoreBox {
+        top:29px;
+       }
+    }
+}

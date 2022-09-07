@@ -13,6 +13,18 @@ let snakeArr = [
 
 let food= {x:15,y:15}
 
+//change level
+ document.querySelector(".easy").addEventListener("click", ()=>{
+    speed= 5;
+ })
+
+ document.querySelector(".medium").addEventListener("click", ()=>{
+    speed= 9;
+ })
+
+ document.querySelector(".hard").addEventListener("click", ()=>{
+    speed= 18;
+ })
 
 //Game Function
 function main(ctime){
@@ -98,7 +110,7 @@ function gameEngine(){
 }
 
 //Main logic starts here
-musicSound.play();
+// musicSound.play();
 let highScore = localStorage.getItem("High Score")
 if(highScore === null){
     highScoreval = 0;

@@ -33,6 +33,11 @@ body {
     width:250px;
     height:100px;
     right:100px;
+    top:20px;
+}
+.style-btn {
+    position: absolute;
+    top: 120px;
 }
 
 #board {
@@ -58,6 +63,16 @@ body {
     background:linear-gradient(green,yellow);
     border: .25vmin solid grey;
     border-radius:50%;
+}
+
+.style-btn> button{
+   padding: 5px 13px;
+   background-color:greenyellow;
+   border: 0.5px solid blue;
+}
+.style-btn> button:hover {
+    color:white;
+    background-color:aqua;
 }
 
 @media screen and (max-width:1200px){

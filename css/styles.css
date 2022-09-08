@@ -1,114 +1,156 @@
 * {
-    margin:0;
-    padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-   background: url(../asset/img/game-background.jpg);
-   background-size:100vw 100vh;
-   background-repeat:no-repeat;
-   display:flex;
-   justify-content:center;
-   align-items:center;
+  background: url(../asset/img/game-background.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #scoreBox {
-    position:absolute;
-    top: 9px;
-    font-size:39px;
-    font-weight:bold;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:aquamarine
+  position: absolute;
+  top: 9px;
+  font-size: 39px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: aquamarine;
 }
 
 #highscoreBox {
-    position:absolute;
-    top: 60px;
-    font-size:39px;
-    font-weight:bold;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:aquamarine
+  position: absolute;
+  top: 60px;
+  font-size: 39px;
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: aquamarine;
 }
 .scoreBody {
-    position: absolute;
-    width:250px;
-    height:100px;
-    right:100px;
-    top:20px;
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  right: 100px;
+  top: 20px;
 }
 .style-btn {
-    position: absolute;
-    top: 120px;
+  position: absolute;
+  top: 120px;
+  transition: ease-in-out;
 }
 
 #board {
-    background: linear-gradient(rgb(131, 150, 233),rgb(240, 88, 176));
-    width:90vmin;
-    height:92vmin;
-    border:2px solid blue;
-    display:grid;
-    grid-template-columns: repeat(18,0.5fr);
-    grid-template-rows: repeat(18,1fr);
+  background: linear-gradient(rgb(131, 150, 233), rgb(240, 88, 176));
+  width: 90vmin;
+  height: 92vmin;
+  border: 2px solid blue;
+  display: grid;
+  grid-template-columns: repeat(18, 0.5fr);
+  grid-template-rows: repeat(18, 1fr);
 }
 .head {
-    background:linear-gradient(red,yellow);
-    border-radius: 10px;
-    transform: scale(1.1);
+  background: linear-gradient(red, yellow);
+  border-radius: 10px;
+  transform: scale(1.1);
 }
 .snake {
-    background-color: purple;
-    border: .25vmin solid white;
-    border-radius: 12px;
+  background-color: purple;
+  border: 0.25vmin solid white;
+  border-radius: 12px;
 }
 .food {
-    background:linear-gradient(green,yellow);
-    border: .25vmin solid grey;
-    border-radius:50%;
+  background: linear-gradient(green, yellow);
+  border: 0.25vmin solid grey;
+  border-radius: 50%;
+  transform:scale(1.1);
 }
 
-.style-btn> button{
+/* .style-btn> button{
    padding: 5px 13px;
    background-color:greenyellow;
    border: 0.5px solid blue;
-}
-.style-btn> button:hover {
+} */
+/* .style-btn> button:hover {
     color:white;
     background-color:aqua;
+} */
+
+.style-btn > button:active {
+  position: relative;
+  top: 2px;
+  background-color: aqua;
 }
 
-@media screen and (max-width:1200px){
-    #board{
-         margin-top:20%;
-         margin-bottom: 20%;
-         width:76vmin;
-         height:78vmin;
-    }
-    .scoreBody {
-        position: absolute;
-        width:250px;
-        height:100px;
-        right:auto;
-    }
-    .scoreBody>#highscoreBox,#scoreBox {
-        font-size:25px;
-    }
-    #scoreBox {
-        top: 3px;
-       }
-       #highscoreBox {
-        top:32px;
-       }
-    body{
-        background-size: cover;
-    }
-    @media screen and (max-width:650px){
-       #board {
-        margin-bottom:32%;
-       }
-       #scoreBox {
-        top: 3px;
-       }
-       #highscoreBox {
-        top:29px;
-       }
-    }
+@media screen and (max-width: 1250px) {
+  #board {
+    margin-top: 27%;
+    margin-bottom: 0%;
+    width: 76vmin;
+    height: 78vmin;
+  }
+  .scoreBody {
+    position: absolute;
+    width: 250px;
+    height: 100px;
+    right: auto;
+  }
+  #highscoreBox,
+  #scoreBox {
+    font-size: 25px;
+  }
+  #scoreBox {
+    top: -15px;
+  }
+  #highscoreBox {
+    top: 5px;
+  }
+  .style-btn {
+    top: 40px;
+  }
+  .body {
+    min-height: 100vh;
+  }
+  body {
+    background-size: cover;
+  }
+  .head {
+    background: linear-gradient(red, yellow);
+    border-radius: 5px;
+    transform: scale(1.1);
+  }
+  .snake {
+    background-color: purple;
+    border: 0.25vmin solid white;
+    border-radius: 4px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #board {
+    margin-top: 150px;
+    margin-bottom: 32%;
+  }
+  #scoreBox {
+    top: -20px;
+  }
+  #highscoreBox {
+    top: 2px;
+  }
+  .style-btn {
+    top: 75px;
+  }
+  .body {
+    min-height: 100vh;
+  }
+  .head {
+    background: linear-gradient(red, yellow);
+    border-radius: 5px;
+    transform: scale(1.1);
+  }
+  .snake {
+    background-color: purple;
+    border: 0.25vmin solid white;
+    border-radius: 4px;
+  }
 }
